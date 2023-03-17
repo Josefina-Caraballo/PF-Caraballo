@@ -1,0 +1,70 @@
+/* SOBRE NOSOTROS */
+.sobre-nosotros{
+    text-align: $alineacion_texto_justificado;
+    line-height: 2.5em;
+}
+
+.galeria-equipo{
+    display: flex;
+    justify-content: $justify_content;
+    flex-wrap: wrap;
+  }
+  
+  .imagen-equipo{
+    width: $ancho_imagen_equipo;
+    margin-bottom: $margen_inferior;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 $fourth_color;
+
+    
+  }
+  
+  .imagen-equipo > img{
+    width: $ancho_imagen_equipo_img;
+    height: $altura_imagen_equipo_img;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .hover-galeria{
+    position: absolute;
+    width: $ancho_hover-galeria;
+    height: $altura_hover_galeria;
+    top: 0;
+    transform: scale(0);
+    background:  $third_color;
+    transition: transform .5s;
+    display: flex;
+   @include column-center-center
+  }
+  
+  .hover-galeria img{
+    width: $ancho_hover_galeria_img;
+  }
+  
+  .hover-galeria p{
+    color: $primary_color;
+  }
+  
+  .imagen-equipo:hover .hover-galeria{
+    transform: scale(1);
+  }
+
+  @media screen and (max-width:900px){
+     /* Nuestro equipo */
+
+     .imagen-equipo{
+        width: $ancho_media_900px_imagen_equipo;
+    }
+  }
+
+  @media screen and (max-width:500px){
+    /* Nuestro equipo */
+
+    .imagen-equipo{
+        width: $ancho_media_500px_imagen_equipo;
+    }
+
+  }
